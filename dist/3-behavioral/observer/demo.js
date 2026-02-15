@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const observer_1 = require("./observer");
+const agency = new observer_1.NewsAgency();
+const channel1 = new observer_1.NewsChannel("Channel 1");
+const channel2 = new observer_1.NewsChannel("Channel 2");
+agency.attach(channel1);
+agency.attach(channel2);
+agency.setNews("TypeScript 6.0 released!");
+agency.detach(channel1);
+agency.setNews("Observer pattern is powerful!");
